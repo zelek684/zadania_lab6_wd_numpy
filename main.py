@@ -38,4 +38,15 @@ print (wektor (5))
 
 #zadanie7
 
+def macierz(n):
+    tab = [x * 2 for x in range(1, n + 1)]
+    temp = []
+    for x in range(0, n):
+        for y in range(0, n):
+            temp.append(tab[abs(x - y)])
+    wynik = np.array(temp)
+    wynik = wynik.reshape((n, n))
+    return wynik
 
+
+print(macierz(10))
